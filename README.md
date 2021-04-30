@@ -1,9 +1,9 @@
 # Collaborating Objects Lab
 
-## Objective
+## Learning Goals
 
-- Gain a deeper understanding of object relations.
-- Build classes that interact with one another through associations and behavior.
+- Gain a deeper understanding of object relations
+- Build classes that interact with one another through associations and behavior
 
 ## Instructions
 
@@ -148,7 +148,7 @@ Build an `MP3Importer` class that:
    handle the creation of `Song` instances and their associated `Artist`
    instances.
 
-### Conclusion
+## Conclusion
 
 These are just a few hints and guidelines to help you through this lab. Rely on
 the guides here, refer to the previous lessons on object relations, and
