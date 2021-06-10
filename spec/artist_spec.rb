@@ -49,16 +49,17 @@ describe 'Artist' do
       smells_like_teen_spirit = Song.new("Smells Like Teen Spirit")
       artist.add_song(song_one)
       artist.add_song(song_two)
+      
       expect(artist.songs).to eq([song_one, song_two])
     end
   end
-
 
 
   describe '.find_or_create_by_name' do
     it 'always returns an Artist instance' do
       artist_1 = Artist.find_or_create_by_name("Michael Jackson")
       artist_2 = Artist.find_or_create_by_name("Michael Jackson")
+      # binding.pry
       expect(artist_1).to be_an(Artist)
       expect(artist_2).to be_an(Artist)
     end
@@ -66,6 +67,7 @@ describe 'Artist' do
     it 'finds or creates an artist by name maintaining uniqueness of objects by name property' do
       artist_1 = Artist.find_or_create_by_name("Michael Jackson")
       artist_2 = Artist.find_or_create_by_name("Michael Jackson")
+      # binding.pry
       expect(artist_1).to eq(artist_2)
     end
 
@@ -83,6 +85,7 @@ describe 'Artist' do
       piano_man = Song.new("Piano Man")
       artist.add_song(dirty_diana)
       artist.add_song(billie_jean)
+      # binding.pry
       expect{artist.print_songs}.to output("Dirty Diana\nBillie Jean\n").to_stdout
     end
   end
